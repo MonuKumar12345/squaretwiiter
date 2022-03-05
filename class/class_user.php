@@ -197,30 +197,33 @@ class SquareUser {
         global $oConnection;
         $aaUserData = [];
         $aFollowingIds = $this->getAllFollowingId($id);
-        $sSql = "SELECT * FROM `user` as `u` WHERE `u`.`user_id`";
         if(count($aFollowingIds)>0){
-            $sSql.="IN (".implode(',',$aFollowingIds).")";
-        }
-        $result = mysqli_query($oConnection,$sSql);
-        if($result){
-            $iData = mysqli_num_rows($result);
-            if($iData>0){
-                while($row = mysqli_fetch_assoc($result)){
-                    $aaUser[] = $row;
-                };
-                $aaUserData['message'] = "Users";
-                $aaUserData['data'] = $aaUser;
-                $aaUserData['sStatus'] = 'success'; 
+            $sSql = "SELECT * FROM `user` as `u` WHERE `u`.`user_id` IN (".implode(',',$aFollowingIds).")";
+            $result = mysqli_query($oConnection,$sSql);
+            if($result){
+                $iData = mysqli_num_rows($result);
+                if($iData>0){
+                    while($row = mysqli_fetch_assoc($result)){
+                        $aaUser[] = $row;
+                    };
+                    $aaUserData['message'] = "Users";
+                    $aaUserData['data'] = $aaUser;
+                    $aaUserData['sStatus'] = 'success'; 
+                }else{
+                        $aaUserData['message'] = "No user available";
+                        $aaUserData['data'] = [];
+                        $aaUserData['sStatus'] = 'failure'; 
+                }
             }else{
-                    $aaUserData['message'] = "No user available";
+                    $aaUserData['message'] = "Something went wrong";
                     $aaUserData['data'] = [];
                     $aaUserData['sStatus'] = 'failure'; 
             }
-        }else{
-                $aaUserData['message'] = "Something went wrong";
-                $aaUserData['data'] = [];
-                $aaUserData['sStatus'] = 'failure'; 
-        }
+       }else{
+        $aaUserData['message'] = "No user available";
+        $aaUserData['data'] = [];
+        $aaUserData['sStatus'] = 'failure';  
+       }
         return $aaUserData;   
     }
     public function getAllFollowingId($id){
