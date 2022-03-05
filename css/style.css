@@ -1,0 +1,108 @@
+body{
+    background-color: #F7F7F7;
+}
+a{
+    text-decoration: none;
+}
+.boxCenter{
+    margin:auto;
+}
+.left-50{
+    left:50%;
+}
+.bgColor{
+    background-color: #fff;
+}
+.navbar {
+    background: linear-gradient(to bottom, #00ccff 0%, #66ff99 100%);
+    height: 46px;
+    width: 100%;
+    padding: 2% 0;
+}
+.logocenter{
+    font-size: 30px !important;
+    margin-top: 11px;
+    color: #fff;
+    margin-left:50%;
+}
+form button{
+    background: linear-gradient(to bottom, #66ff99 0%, #00ffcc 100%);
+}
+.followingBtn{
+    background: linear-gradient(to bottom, #66ff99 0%, #00ffcc 100%);
+}
+.profileCard{
+    padding:0 !important;
+    position: relative;
+}
+.profileCard .profilecardhead{
+    background: linear-gradient(to bottom, #ff0066 0%, #ff6600 100%);
+    padding: 5% 5% 5% 5%;
+}
+.profileCard .profilecardhead .profile-user-icon{
+    color:#fff;
+    font-size: 20px;
+}
+.profileCard .profilecardhead .profile-email-icon{
+    color:#fff;
+    font-size: 16px;
+}
+.profileCard .profilecardbottom{
+    background: linear-gradient(to bottom, #ffffff 0%, #ccffff 100%);
+    padding-top: 5%;
+    padding-bottom: 10%;
+    padding-left: 5%;
+    text-align: center;
+}
+.profileCard .profilecardbottom .profileStats{
+    color:#657786;
+    font-size:12px;
+    font-weight:bold;
+}
+.profileCard .profilecardbottom .profileStatsHead{
+    color:#657786;
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:0,02em;
+}
+.profileCard .profilecardbottom .profileStatsBottom{
+    font-size:18px;
+    font-weight:bold;
+    padding-top:3px;
+    color:#ff0000;
+}
+.profileCard .profilecardbottom a{
+float:left !important;
+}
+.post_submit_button button{
+    background: linear-gradient(to bottom, #ff3300 0%, #ff9900 100%);
+    float:right;
+}
+.postStatusBodyContainer{
+    padding: 0 10px 0 10px !important;
+}
+.postStatusBodyContainer .postStatusBody{
+    background: linear-gradient(to bottom, #ff9966 0%, #ffcc00 100%);
+    padding:50px 10px;
+}
+.postStatusBodyContainer .postStatusBody textarea{
+    border-radius: 12px;
+}
+.allPostStatusBody{
+    color: #fff;
+    background: linear-gradient(to bottom, #ff9966 0%, #ffcc00 100%);
+    padding:50px 10px;
+}
+.allPostStatusBody .posthead i{
+    font-weight: bold;
+}
+.logout{
+    color:#fff;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: 2%;
+}
+.userDetails{
+    padding-left:5%;
+    margin-bottom:5%;
+}
